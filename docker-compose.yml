@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql
+    ports:
+      - 12345:3306
+    environment:
+      MYSQL_DATABASE: covid_19
+      MYSQL_USER: covid_19
+      MYSQL_PASSWORD: covid_19
+      MYSQL_ROOT_PASSWORD: covid_19
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

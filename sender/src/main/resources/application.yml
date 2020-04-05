@@ -1,0 +1,6 @@
+spring:
+  mvc:
+    servlet:
+      path: /samplecovid19
+#server:
+#  port: 8080

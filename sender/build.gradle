@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.jordanec'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation project(':model')
+    compile group: 'mysql', name: 'mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}

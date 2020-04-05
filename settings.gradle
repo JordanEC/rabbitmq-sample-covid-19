@@ -1,0 +1,5 @@
+rootProject.name = 'rabbitmq-sample-covid-19'
+include 'receiver'
+include 'model'
+include 'sender'
+
