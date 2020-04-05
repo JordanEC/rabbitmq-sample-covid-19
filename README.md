@@ -1,4 +1,4 @@
-#Sample covid-19 updates broadcaster
+# Sample covid-19 updates broadcaster
 
 Simple broadcaster of updates of covid-19 stats by country/continent using RabbitMq and Spring AMQP. 
 There are 2 spring boot applications, the sender broadcasts updates and there could be N number of consumers
@@ -7,19 +7,19 @@ subscribed to those updates based on the continent or country that are listening
 In the sender application, there's a controller to publish updates.
 Set country (Alpha-3) and continent (Alpha-2) names using these codes: https://www.iban.com/country-codes and https://datahub.io/core/continent-codes/r/0.html
 
-[POST] http://localhost:8080/samplecovid19/update/create
-Body: 
-{
-    "continent": "CR",
-    "countryName": "CRI",
-    "cases": 435,
-    "deaths": 2,
-    "recovered": 13
+[POST] http://localhost:8080/samplecovid19/update/create <br/>
+Body: <br/>
+{ <br/>
+    "continent": "CR" , <br/>
+    "countryName": "CRI" , <br/>
+    "cases": 435 , <br/>
+    "deaths": 2 , <br/>
+    "recovered": 13 <br/>
 }
 
 Updates will be printed on receivers console
 
-#How to run
+# How to run
 
 + Run docker dependencies: docker-compose up -d
 + Run the sender application: ./gradlew sender:bootrun
